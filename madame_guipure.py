@@ -24,4 +24,3 @@ def madame_guipure(somme_a_rendre):
         print("Désolé, nous n'avons pas suffisamment de monnaie pour vous rembourser correctement.")
 
     return dico_somme
-print(madame_guipure())
