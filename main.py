@@ -84,12 +84,15 @@ def olivander(gallions_donnees: int, mornilles_donnees: int, noises_donnees: int
 
 def fonction_affichage(resultat, somme_a_rendre):
     """
-    Doc-String:
-    Entrée: 
-    Sortie: 
+    Doc-String: Affiche le rendu de monnaie avec le détail du nombre de billets ou pièces.
+    Entrée:
+    - resultat (dict): Un dictionnaire représentant le rendu de monnaie.
+    - somme_a_rendre (int): La somme totale à rendre.
+    Sortie: None
     """
     for key, value in resultat.items():
         print(f"Voilà {value} billets de {key} pour une somme totale de {somme_a_rendre}:")
+
 
 def fonction_ihm():
     """
@@ -97,39 +100,40 @@ def fonction_ihm():
     Entrée: vide
     Sorti: vide
     """
-    
-       
-    reponse = input("Bonjour vous êtes sur le chemin de traverse les choix sont les suivants: Vos choix  1: Flurry et bott,\n 2:Madame Guipure,\n 3: Olivander")
+    reponse = input("Bonjour, vous êtes sur le chemin de traverse. Les choix sont les suivants: Vos choix  1: Flurry et bott,\n 2:Madame Guipure,\n 3: Olivander")
+
     while reponse in ('1', '2', '3'):
-		if reponse == '1':
-			choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
-			while choix_inter in ('1', '2'):
-				if choix_inter == '1':
-					print(flurry_et_bott(0, 60, 63, 231, 899))
-				else:
-					choix_monaie_utilisateur_fb = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
-					aff_rendu_utilisateur_fb = flurry_et_bott(choix_monaie_utilisateur_fb)
-					fonction_affichage(aff_rendu_utilisateur_fb, choix_monaie_utilisateur_fb)
-					choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
-				
-		elif reponse == '2':
-			choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
-			if choix_inter == '1':
-				print(madame_guipure(0, 17, 68, 231, 497, 842))
-			else:
-				choix_monaie_utilisateur_mg = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
-				aff_rendu_utilisateur_mg = madame_guipure(choix_monaie_utilisateur_mg)
-				fonction_affichage(aff_rendu_utilisateur_mg, choix_monaie_utilisateur_mg)
-				
-		elif reponse == '3':
-			choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
-			if choix_inter == '1':
-				print(olivander)
-			else:
-				choix_monaie_utilisateur_ol = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
-				aff_rendu_utilisateur_ol = olivander(choix_monaie_utilisateur_ol)
-				fonction_affichage(aff_rendu_utilisateur_ol, choix_monaie_utilisateur_ol)
-				
-	else:
+        if reponse == '1':
+            choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
+            while choix_inter in ('1', '2'):
+                if choix_inter == '1':
+                    print(flurry_et_bott(0, 60, 63, 231, 899))
+                else:
+                    choix_monaie_utilisateur_fb = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
+                    aff_rendu_utilisateur_fb = flurry_et_bott(choix_monaie_utilisateur_fb)
+                    fonction_affichage(aff_rendu_utilisateur_fb, choix_monaie_utilisateur_fb)
+                    choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
+                
+        elif reponse == '2':
+            choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
+            if choix_inter == '1':
+                print(madame_guipure(0, 17, 68, 231, 497, 842))
+            else:
+                choix_monaie_utilisateur_mg = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
+                aff_rendu_utilisateur_mg = madame_guipure(choix_monaie_utilisateur_mg)
+                fonction_affichage(aff_rendu_utilisateur_mg, choix_monaie_utilisateur_mg)
+                
+        elif reponse == '3':
+            choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
+            if choix_inter == '1':
+                print(olivander)
+            else:
+                choix_monaie_utilisateur_ol = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
+                aff_rendu_utilisateur_ol = olivander(choix_monaie_utilisateur_ol)
+                fonction_affichage(aff_rendu_utilisateur_ol, choix_monaie_utilisateur_ol)
+                
+        reponse = input("Bonjour, vous êtes sur le chemin de traverse. Les choix sont les suivants: Vos choix  1: Flurry et bott,\n 2:Madame Guipure,\n 3: Olivander")
+    else:
         print("Choix invalide. Retour au chemin de traverse.")
+
            
