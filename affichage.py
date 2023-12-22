@@ -1,5 +1,5 @@
 def fonction_affichage(resultat, somme_a_rendre):
-   """
+    """
     Affiche le rendu de monnaie en détaillant le nombre de billets et pièces pour une somme donnée.
 
     Paramètres:

@@ -1,3 +1,5 @@
+from affichage import fonction_affichage
+
 def calculer_rendu_monnaie(somme):
     """
     Calcule le rendu de monnaie en gallions, mornilles et noises.
@@ -15,3 +17,13 @@ def calculer_rendu_monnaie(somme):
     noises = reste % 29     # Ce qui ne peut faire des mornilles donc des noises
 
     return gallions, mornilles, noises
+
+def olivander():
+    """
+    Fonction principale d'Olivander pour traiter des sommes prédéfinies.
+    """
+    sommes = {0, 654, 23 * 29 + 78, 2 * 17 + 11 * 29 + 9, 7 * 17 + 531 * 29 + 451}
+
+    for somme in sommes:
+        rendu = calculer_rendu_monnaie(somme)
+        fonction_affichage(rendu, somme)

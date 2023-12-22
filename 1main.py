@@ -7,6 +7,7 @@ from affichage import fonction_affichage
 from flurry_et_bott import flurry_et_bott
 from madame_guipure import madame_guipure
 from olivander import calculer_rendu_monnaie
+from olivander import olivander
 #----------------------------------------------------------------------------------
 #Partie : Fonction de ihm du traitement de donnée
 def fonction_ihm():
@@ -24,8 +25,8 @@ def fonction_ihm():
                 if choix_inter == '1':
                     values = [0, 60, 63, 231, 899]
                     for value in values:
-                        resultat = flurry_et_bott(value)
-                        print(resultat)
+                        resultat = calculer_rendu_monnaie(value)
+                        fonction_affichage(resultat, value)
                         
                 else:
                     choix_monaie_utilisateur_fb = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
@@ -40,7 +41,7 @@ def fonction_ihm():
                 values = [0, 17, 68, 231, 497, 842]
                 for value in values:
                     resultat = flurry_et_bott(value)
-                    print(resultat)
+                    fonction_affichage(resultat, value)
                     
             else:
                 choix_monaie_utilisateur_mg = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
@@ -51,10 +52,7 @@ def fonction_ihm():
         elif reponse == '3':
             choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
             if choix_inter == '1':
-                sommes = {0, 654, 23 * 29 + 78, 2 * 17 + 11 * 29 + 9, 7 * 17 + 531 * 29 + 451} #Tout est convertis en noises pour après être transformé en mornilles et gallions.
-                for somme in sommes:
-                    rendu = calculer_rendu_monnaie(somme)
-                    fonction_affichage(rendu, somme)
+                    olivander()
                     
             else:
                 choix_monaie_utilisateur_ol = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
@@ -67,3 +65,4 @@ def fonction_ihm():
         print("Choix invalide. Retour au chemin de traverse.")
 
 fonction_ihm()
+#Entièrement réaliser par TAMPIGNY thibault
