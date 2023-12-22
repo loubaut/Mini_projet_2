@@ -22,7 +22,7 @@ def olivander():
     """
     Fonction principale d'Olivander pour traiter des sommes prédéfinies.
     """
-    sommes = {0, 654, 23 * 29 + 78, 2 * 17 + 11 * 29 + 9, 7 * 17 + 531 * 29 + 451}
+    sommes = [0, 654, 23 * 29 + 78, 2 * 17 + 11 * 29 + 9, 7 * 17 + 531 * 29 + 451] #Tout convertis en noises
 
     for somme in sommes:
         rendu = calculer_rendu_monnaie(somme)

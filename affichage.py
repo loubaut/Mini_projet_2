@@ -1,4 +1,4 @@
-def fonction_affichage(resultat, somme_a_rendre):
+def fonction_affichage(resultat, somme_a_rendre, monnaie_disponible):
     """
     Affiche le rendu de monnaie en détaillant le nombre de billets et pièces pour une somme donnée.
 
@@ -10,5 +10,11 @@ def fonction_affichage(resultat, somme_a_rendre):
     Return:
     None
     """
+
+    print(f"Pour une somme à rendre de {somme_a_rendre} :")
     for key, value in resultat.items():
-        print(f"Voilà {value} villets de {key} pour une somme totale de {somme_a_rendre}: ")
+        print(f"Voilà {value} billets de {key}.")
+    if monnaie_disponible > 0:
+        print(f"Désolé, nous n'avons pas suffisamment de monnaie pour vous rembourser correctement, il reste {monnaie_disponible}.")
+        
+    

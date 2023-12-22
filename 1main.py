@@ -25,13 +25,13 @@ def fonction_ihm():
                 if choix_inter == '1':
                     values = [0, 60, 63, 231, 899]
                     for value in values:
-                        resultat = flurry_et_bott(value)
-                        fonction_affichage(resultat, value)
+                        resultat, monnaie_disponible = flurry_et_bott(value)
+                        fonction_affichage(resultat, value, monnaie_disponible)
                         
                 else:
                     choix_monaie_utilisateur_fb = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
-                    aff_rendu_utilisateur_fb = flurry_et_bott(choix_monaie_utilisateur_fb)
-                    fonction_affichage(aff_rendu_utilisateur_fb, choix_monaie_utilisateur_fb)
+                    aff_rendu_utilisateur_fb, monnaie_disponible = flurry_et_bott(choix_monaie_utilisateur_fb)
+                    fonction_affichage(aff_rendu_utilisateur_fb, choix_monaie_utilisateur_fb, monnaie_disponible)
                     choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
                 choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")
                 
@@ -40,13 +40,13 @@ def fonction_ihm():
             if choix_inter == '1':
                 values = [0, 17, 68, 231, 497, 842]
                 for value in values:
-                    resultat = madame_guipure(value)
-                    fonction_affichage(resultat, value)
+                    resultat, somme_disponible = madame_guipure(value)
+                    fonction_affichage(resultat, value, somme_disponible)
                     
             else:
                 choix_monaie_utilisateur_mg = int(input("Veuillez renseigner le montant que je dois vous rendre: "))
-                aff_rendu_utilisateur_mg = madame_guipure(choix_monaie_utilisateur_mg)
-                fonction_affichage(aff_rendu_utilisateur_mg, choix_monaie_utilisateur_mg)
+                aff_rendu_utilisateur_mg, monnaie_disponible = madame_guipure(choix_monaie_utilisateur_mg)
+                fonction_affichage(aff_rendu_utilisateur_mg, choix_monaie_utilisateur_mg, monnaie_disponible)
             choix_inter = input("Choisissez entre le choix imposé ou la monnaie que je dois vous rendre\n1: Choix imposé\n2: Monnaie que je dois vous rendre")   
              
         elif reponse == '3':

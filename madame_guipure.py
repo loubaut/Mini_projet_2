@@ -4,7 +4,6 @@ def madame_guipure(somme_a_rendre):
     Entrée : La somme que l'on doit rentre au client
     Sorti : Le nombre de valeurs demander pour atteindre la somme a rendre au client
     """
-    assert somme_a_rendre >= 0, "La somme que je dois vous rendre ne peux pas être négative"
     somme = {200: 1, 100: 3, 50: 1, 20: 1, 10: 1, 5: 1, 2: 5}
     dico_somme = {}
     monnaie_disponible = True  # Variable pour vérifier si la monnaie est disponible
@@ -19,9 +18,4 @@ def madame_guipure(somme_a_rendre):
             quantite_dispo -= nb_billets_a_rendre  # Met à jour la quantité disponible
     monnaie_disponible = all(quantite_dispo == 0 for quantite_dispo in somme.values())
 
-    if monnaie_disponible:
-        print(f'Monnaie rendue avec succès: {dico_somme}')
-    else:
-        print("Désolé, nous n'avons pas suffisamment de monnaie pour vous rembourser correctement.")
-
-    return dico_somme
+    return dico_somme, somme_a_rendre

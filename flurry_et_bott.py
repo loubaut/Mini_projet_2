@@ -14,4 +14,4 @@ def flurry_et_bott(somme_a_rendre):
             nb_billets_a_rendre = somme_a_rendre // billet
             dico_somme[billet] = nb_billets_a_rendre
             somme_a_rendre -= billet * nb_billets_a_rendre
-    return dico_somme
+    return dico_somme, 0
