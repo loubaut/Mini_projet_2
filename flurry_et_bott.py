@@ -5,6 +5,7 @@ def flurry_et_bott(somme_a_rendre):
     Entrée : 
     Sorti :
     """
+    assert somme_a_rendre >= 0, "La somme que je dois vous rendre ne peux pas être négative"
     somme = [500, 200, 100, 50, 20, 10, 5, 2, 1]
     dico_somme = {}
 

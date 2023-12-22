@@ -25,7 +25,7 @@ def fonction_ihm():
                 if choix_inter == '1':
                     values = [0, 60, 63, 231, 899]
                     for value in values:
-                        resultat = calculer_rendu_monnaie(value)
+                        resultat = flurry_et_bott(value)
                         fonction_affichage(resultat, value)
                         
                 else:
@@ -40,7 +40,7 @@ def fonction_ihm():
             if choix_inter == '1':
                 values = [0, 17, 68, 231, 497, 842]
                 for value in values:
-                    resultat = flurry_et_bott(value)
+                    resultat = madame_guipure(value)
                     fonction_affichage(resultat, value)
                     
             else:

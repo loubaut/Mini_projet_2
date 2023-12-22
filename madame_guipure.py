@@ -4,6 +4,7 @@ def madame_guipure(somme_a_rendre):
     Entrée : La somme que l'on doit rentre au client
     Sorti : Le nombre de valeurs demander pour atteindre la somme a rendre au client
     """
+    assert somme_a_rendre >= 0, "La somme que je dois vous rendre ne peux pas être négative"
     somme = {200: 1, 100: 3, 50: 1, 20: 1, 10: 1, 5: 1, 2: 5}
     dico_somme = {}
     monnaie_disponible = True  # Variable pour vérifier si la monnaie est disponible
